@@ -8,10 +8,15 @@ enlaces[i].addEventListener('click', function(event){
 
 // al hacer clic: Imágenes: Cambia la imagen por uno de los gif que tienes en la carpeta assets con el nombre magic-*.
 
-function cambiarFotos(){
-    document.getElementsByClassName("kg-image").src ="./varita-magica/assets/magic-1.gif";
+function cambiarFotos(event){
+   event.target.src = "assets/magic-1.gif"
 }
-document.getElementsByClassName("kg-image").addEventListener("click", cambiarFotos)
+let fotos = document.getElementsByTagName("img")
+for(let i=0; i<fotos.length; i++){
+ fotos[i].addEventListener("click", cambiarFotos)
+}
+
+
 
 
 
