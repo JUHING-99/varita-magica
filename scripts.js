@@ -5,3 +5,13 @@ enlaces[i].addEventListener('click', function(event){
     event.preventDefault();
 });
 }
+
+// al hacer clic: Imágenes: Cambia la imagen por uno de los gif que tienes en la carpeta assets con el nombre magic-*.
+
+function cambiarFotos(){
+    document.getElementsByClassName("kg-image").src ="./varita-magica/assets/magic-1.gif";
+}
+document.getElementsByClassName("kg-image").addEventListener("click", cambiarFotos)
+
+
+
