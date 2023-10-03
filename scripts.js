@@ -69,5 +69,21 @@ for (let i = 0; i < article.length; i++) {
     })
  }
 
+//Premium:
+ //Crea una función de nombre getRandom que acepte un array con valores y devuelva uno de ellos de manera aleatoria.
+ const colors = ['red', 'blue', 'green']
 
- 
+const getRandom = (array) => {
+    /* código misterioso */
+}
+
+console.log(getRandom(colors))
+// imprime 'red', 'blue' o 'green'
+
+
+
+//Utiliza la función creada getRandom para utilizar colores aleatorios de una paleta que hayas escogido de coolors.co en los apartados anteriores.
+
+
+
+//Utiliza la función creada getRandom para utilizar gifs aleatorios en los apartados anteriores.
