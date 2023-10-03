@@ -15,7 +15,14 @@ let fotos = document.getElementsByTagName("img")
 for(let i=0; i<fotos.length; i++){
  fotos[i].addEventListener("click", cambiarFotos)
 }
+ //al hacer mouseover: Imágenes: Cambia la imagen por el gif abracadabra.gif.
 
+ function abracadabraFotos(img){
+    img.target.src = "assets/abracadabra.gif"
+ }
+ for(let i=0; i<fotos.length; i++){
+  fotos[i].addEventListener("mouseover", abracadabraFotos)
+ }
 
 //al hacer clic: Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
 
@@ -42,14 +49,7 @@ for (let i = 0; i < article.length; i++) {
 }
 
 
- //al hacer mouseover: Imágenes: Cambia la imagen por el gif abracadabra.gif.
 
- function abracadabraFotos(img){
-    img.target.src = "assets/abracadabra.gif"
- }
- for(let i=0; i<fotos.length; i++){
-  fotos[i].addEventListener("mouseover", abracadabraFotos)
- }
 
 
  //al hacer mouseover:Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
@@ -57,6 +57,10 @@ for (let i = 0; i < article.length; i++) {
     parrafos[i].addEventListener("mouseover", function(){
         parrafos[i].style.color = getRandom(colors);
         parrafos[i].style.backgroundColor = getRandom(colors);
+    })
+    parrafos[i].addEventListener("mouseout", function(){
+        parrafos[i].style.color= "black"
+        parrafos[i].style.backgroundColor = "white";
     })
 }
 
@@ -66,6 +70,10 @@ for (let i = 0; i < article.length; i++) {
     article[i].addEventListener("mouseover", function(){
         article[i].style.backgroundColor = getRandom(colors);
         section[i].style.backgroundColor = getRandom(colors);
+    })
+    article[i].addEventListener("mouseout", function(){
+        parrafos[i].style.backgroundColor = "white";
+        section[i].style.backgroundColor = "white";
     })
  }
 
