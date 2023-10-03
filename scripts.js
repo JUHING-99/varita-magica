@@ -9,7 +9,7 @@ enlaces[i].addEventListener('click', function(event){
 // al hacer clic: Imágenes: Cambia la imagen por uno de los gif que tienes en la carpeta assets con el nombre magic-*.
 
 function cambiarFotos(event){
-   event.target.src = "assets/magic-1.gif"
+   event.target.src = getRandom(randomGif);
 }
 let fotos = document.getElementsByTagName("img")
 for(let i=0; i<fotos.length; i++){
@@ -23,8 +23,8 @@ for(let i=0; i<fotos.length; i++){
  
  for (let i = 0; i < parrafos.length; i++) {
     parrafos[i].addEventListener("click", function(){
-        parrafos[i].style.color = "white";
-        parrafos[i].style.backgroundColor = "black";
+        parrafos[i].style.color = getRandom(colors);
+        parrafos[i].style.backgroundColor = getRandom(colors);
     })
 }
 
@@ -36,16 +36,16 @@ let section = document.querySelectorAll("section")
  
 for (let i = 0; i < article.length; i++) {
    article[i].addEventListener("click", function(){
-       article[i].style.backgroundColor = "purple";
-       section[i].style.backgroundColor = "lightblue";
+       article[i].style.backgroundColor = getRandom(colors);
+       section[i].style.backgroundColor = getRandom(colors);
    })
 }
 
 
  //al hacer mouseover: Imágenes: Cambia la imagen por el gif abracadabra.gif.
 
- function abracadabraFotos(event){
-    event.target.src = "assets/abracadabra.gif"
+ function abracadabraFotos(img){
+    img.target.src = "assets/abracadabra.gif"
  }
  for(let i=0; i<fotos.length; i++){
   fotos[i].addEventListener("mouseover", abracadabraFotos)
@@ -55,8 +55,8 @@ for (let i = 0; i < article.length; i++) {
  //al hacer mouseover:Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
  for (let i = 0; i < parrafos.length; i++) {
     parrafos[i].addEventListener("mouseover", function(){
-        parrafos[i].style.color = "red";
-        parrafos[i].style.backgroundColor = "yellow"
+        parrafos[i].style.color = getRandom(colors);
+        parrafos[i].style.backgroundColor = getRandom(colors);
     })
 }
 
@@ -64,26 +64,22 @@ for (let i = 0; i < article.length; i++) {
 
  for (let i = 0; i < article.length; i++) {
     article[i].addEventListener("mouseover", function(){
-        article[i].style.backgroundColor = "orange";
-        section[i].style.backgroundColor = "beige";
+        article[i].style.backgroundColor = getRandom(colors);
+        section[i].style.backgroundColor = getRandom(colors);
     })
  }
 
 //Premium:
  //Crea una función de nombre getRandom que acepte un array con valores y devuelva uno de ellos de manera aleatoria.
- const colors = ['red', 'blue', 'green']
+const colors = ["#005F73", "#0A9396", "#94D2BD", "#E9D8A6", "#EE9B00", "#CA6702", "#BB3E03", "#AE2012", "#9B2226"]
+const randomGif = ["assets/magic-2.gif", "assets/magic-3.gif", "assets/magic-4.gif", "assets/magic-5.gif", "assets/magic-6.gif" ]
 
 const getRandom = (array) => {
-    /* código misterioso */
+    let aleatorio = array[Math.floor(Math.random()*array.length)]
+    return aleatorio
 }
-
-console.log(getRandom(colors))
-// imprime 'red', 'blue' o 'green'
-
 
 
 //Utiliza la función creada getRandom para utilizar colores aleatorios de una paleta que hayas escogido de coolors.co en los apartados anteriores.
-
-
 
 //Utiliza la función creada getRandom para utilizar gifs aleatorios en los apartados anteriores.
