@@ -17,6 +17,57 @@ for(let i=0; i<fotos.length; i++){
 }
 
 
+//al hacer clic: Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
+
+ let parrafos = document.querySelectorAll("p")
+ 
+ for (let i = 0; i < parrafos.length; i++) {
+    parrafos[i].addEventListener("click", function(){
+        parrafos[i].style.color = "white";
+        parrafos[i].style.backgroundColor = "black";
+    })
+}
 
 
+//al hacer clic: Bloques de article o section: Cambia el color de fondo.
 
+let article = document.querySelectorAll("article")
+let section = document.querySelectorAll("section")
+ 
+for (let i = 0; i < article.length; i++) {
+   article[i].addEventListener("click", function(){
+       article[i].style.backgroundColor = "purple";
+       section[i].style.backgroundColor = "lightblue";
+   })
+}
+
+
+ //al hacer mouseover: Imágenes: Cambia la imagen por el gif abracadabra.gif.
+
+ function abracadabraFotos(event){
+    event.target.src = "assets/abracadabra.gif"
+ }
+ for(let i=0; i<fotos.length; i++){
+  fotos[i].addEventListener("mouseover", abracadabraFotos)
+ }
+
+
+ //al hacer mouseover:Párrafos: Cambia el color del texto y el de fondo por uno cualquiera.
+ for (let i = 0; i < parrafos.length; i++) {
+    parrafos[i].addEventListener("mouseover", function(){
+        parrafos[i].style.color = "red";
+        parrafos[i].style.backgroundColor = "yellow"
+    })
+}
+
+ //al hacer mouseover: Bloques de article o section: Color de fondo distinto al de párrafo.
+
+ for (let i = 0; i < article.length; i++) {
+    article[i].addEventListener("mouseover", function(){
+        article[i].style.backgroundColor = "orange";
+        section[i].style.backgroundColor = "beige";
+    })
+ }
+
+
+ 
